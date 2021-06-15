@@ -2,17 +2,18 @@
 #include <omp.h>
 
 int main() {
-    #pragma omp parallel 
+    // cria regiões paralelas
+    #pragma omp parallel
     {
-        #pragma omp master 
+        // cria uma tarefa
+        #pragma omp task
         {
-            std::cout << "só roda uma vez na thread:" << omp_get_thread_num() << "\n";
-            #pragma omp task 
-            {
-                std::cout << "Estou rodando na thread:" << omp_get_thread_num() << "\n";
-            }
+            std::cout << "Estou rodando na tarefa " << omp_get_thread_num() << "\n";
         }
     }
+    std::cout << "eu só rodo quando TODAS tarefas acabarem.\n";
 
     return 0;
 }
+
+// como cada thread roda o código da região paralela, cada uma cria exatamente uma tarefa

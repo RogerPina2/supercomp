@@ -10,6 +10,7 @@ int main() {
     step = 1.0 / (double)num_steps;
 
     auto start_time = std::chrono::high_resolution_clock::now();
+    // esse for roda muitas vezes, então é um bom candidato a paralelismo
     for (i = 0; i < num_steps; i++) {
         x = (i + 0.5) * step;
         sum = sum + 4.0 / (1.0 + x * x);
