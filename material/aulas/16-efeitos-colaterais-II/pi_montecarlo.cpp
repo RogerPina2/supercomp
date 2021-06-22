@@ -30,6 +30,9 @@ int main() {
     std::cout << sum << "\n";
 }
 
-// A variável dist (sorteio de pontos) é um processo sequencial que depende dos números anteriormente sorteados, e, portanto, gera efeitos colaterais.
-// Para evitar problemas ao compartilhar o gerador de números aleatórios, usamos omp critical no sorteio de pontos x e y
-// Desde que os pares x, y sorteados sejam os mesmos, o for pode rodar em qualquer ordem que os resultados não irão sofrer alterações
+// A variável dist (sorteio de pontos) é um processo sequencial que depende dos números anteriormente 
+// sorteados, e, portanto, gera efeitos colaterais.
+// Para evitar problemas ao compartilhar o gerador de números aleatórios, 
+// usamos omp critical no sorteio de pontos x e y
+// Desde que os pares x, y sorteados sejam os mesmos, o for pode rodar em qualquer ordem 
+// que os resultados não irão sofrer alterações

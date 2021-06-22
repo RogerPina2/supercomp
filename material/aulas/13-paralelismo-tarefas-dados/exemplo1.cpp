@@ -12,4 +12,6 @@ int main() {
 }
 
 // Não é possível predizer o resultado do código acima
-// No caso acima o loop foi dividido igualmente entre as threads, mas isso é uma decisão do compilador e não temos controle sobre qual será seu comportamento. Isso pode variar de compilador para compilador.
+// No caso acima o loop foi dividido igualmente entre as threads, 
+// mas isso é uma decisão do compilador e não temos controle sobre qual será seu comportamento. 
+// Isso pode variar de compilador para compilador.

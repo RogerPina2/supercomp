@@ -5,7 +5,7 @@
 #include <omp.h>
 
 int main() {
-    // cria regiões paralelas e roda OMP_NUM_THREADS threads que rodam o bloco de código de maniera independente
+    // cria regiões paralelas e roda OMP_NUM_THREADS threads que rodam o bloco de código de maneira independente
     #pragma omp parallel 
     {
         std::cout << "ID:" << omp_get_thread_num() << "/" << 
