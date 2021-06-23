@@ -3,6 +3,7 @@
 #include <iostream>
 
 int main() {
+    // Criação do container vector alocado na CPU (host) 
     thrust::host_vector<double> host(5, 0);
     host[4] = 35;
 
@@ -11,6 +12,7 @@ int main() {
     thrust::device_vector<double> dev(host);    
     /* a linha abaixo só muda o vetor na CPU */
     host[2] = 12;
+    dev[3] = 14;
     
     printf("Host vector: ");
     for (auto i = host.begin(); i != host.end(); i++) {
